@@ -9,6 +9,7 @@ import {RecipeDetailComponent} from './recipes/recipe-detail/recipe-detail.compo
 import {RecipeItemComponent} from './recipes/recipe-list/recipe-item/recipe-item.component';
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit.component';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit
     ShoppingEditComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
