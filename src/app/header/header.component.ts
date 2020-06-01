@@ -1,16 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  collapsed = true;
-  constructor() {
-  }
+export class HeaderComponent {
+  @Output() featureSelected = new EventEmitter<string>();
 
-  ngOnInit(): void {
-  }
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature);
 
+  }
 }
